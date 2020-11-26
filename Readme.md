@@ -1,1 +1,1 @@
-Description of the title
+React Native application
