@@ -1,0 +1,51 @@
+import React ,{Component}from 'react';
+//React.Fragment is the wrapper element so it removes all the div 
+//Instaed of multiple div use this react.Fragment
+//Dont use both react.fragment and div no use 
+
+class Header extends Component{
+
+    //component class has constructor 
+    constructor(){
+       //It helps to inheriate the property from parent class
+        super()
+        //Can declare multiple variable(State is the local variable)
+        this.state ={
+            title:'Riyahobby',
+            keyword:'User text here'
+        }
+
+    }
+    //to return from class you need method render 
+    render(){
+        //How to define css 
+        const mystyle={
+            header:{
+                backgroundColor:'tomato'
+
+            },
+            logo:{
+                textAlign:'color',
+                color:'#fff',
+                fontsize:'30px'
+
+            }
+        }
+        return(
+        <React.Fragment>
+            <header style={mystyle.header}>
+             <div style={mystyle.logo}>{this.state.title}</div>
+            <center>
+                <p style={{color:'#fff'}}>{this.state.keyword}</p>
+            </center>
+      
+        </header>
+        </React.Fragment>
+        )
+    }
+
+}
+
+
+//Only first component in index.js we use render for other components use export 
+export default Header;

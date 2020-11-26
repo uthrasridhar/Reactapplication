@@ -1,0 +1,29 @@
+import React from 'react';
+import ReactDOM from 'react-dom' ;
+import Header from './component/Header';
+import Footer from './component/Footer';
+
+
+//functional component (App)
+//It is used to display the UI on the screen 
+
+const App = () => {
+    return (
+      //In order to return more than one paramter use the wrapper (Like div,nav)  
+    //Warp in one parent element (div,header,footer,nav,section)
+    //Keep calling  each component in this div (Header,footer etc )
+    //In function component you can pass the data but you cant define the state 
+    //Passing data from App functi compon to Footer 
+    <React.Fragment>
+       <Header/>
+        <h1>Riya loves to do coding  </h1>
+        <h2>Riya is very good at Chess</h2>
+        <Footer year="2020" month="sep"/>
+        </React.Fragment>
+    )
+} 
+
+//To render use reactdom --Render App function name and then get elementid (div)  from public/index.html file 
+//We are assigning only one root element for the entire application
+//Our app(component name) loads on this root element (Single page application)
+ReactDOM.render(<App/>,document.getElementById('root'))
